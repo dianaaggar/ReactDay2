@@ -1,23 +1,22 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Menu from './Components/Menu';
+import menu from './models/menu';
+
+const state = {
+  menu
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Menu receiptInfo= { state.menu[0]} />
+      <Menu receiptInfo= { state.menu[1]} />
+      <Menu receiptInfo= { state.menu[2]} />
+      <Menu receiptInfo= { state.menu[3]} />
+  
+  
     </div>
   );
 }
